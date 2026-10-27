@@ -1,5 +1,5 @@
 <!-- ======================= HERO ======================= -->
-# DSA IN C <img align="right" src="https://skillicons.dev/icons?i=c&theme=dark" />
+# <p align="center">DSA IN C </p><img align="right" src="https://skillicons.dev/icons?i=c&theme=dark" />
 <p align="center">
   <img src="https://user-images.githubusercontent.com/74038190/213910842-5a320d6b-e48f-4d41-a901-0e6a357e8dae.gif"
        width="280"
