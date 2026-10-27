@@ -5,8 +5,7 @@
        width="280"
        alt="Coding animation" />
 </p>
-
-<h1 align="center">⚡ DSA IN C</h1>
+<h1 align="center">DSA IN C</h1>
 
 <h3 align="center">
   Data Structures & Algorithms • Implemented in C
