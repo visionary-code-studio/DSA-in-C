@@ -45,7 +45,7 @@ navigate, practice, understand, and revise individual concepts.
 
 ---
 
-## 🧠 Bucket 1 — Graphs, BST & Traversal
+## ©️ Bucket 1 — Graphs, BST & Traversal
 
 **Focus:** Graph algorithms, tree operations, recursion, and traversal techniques.
 
