@@ -211,16 +211,3 @@ Keep your code readable, properly organized, and easy to compile.
 
 ---
 
-<p align="center">
-  Made with ❤️, C, and pointers.
-  <br><br>
-  <sub>
-    Animated GIFs:
-    <a href="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub">
-      Anmol-Baranwal/Cool-GIFs-For-GitHub
-    </a>
-    <br>
-    Icons:
-    <a href="https://skillicons.dev">skillicons.dev</a>
-  </sub>
-</p>
