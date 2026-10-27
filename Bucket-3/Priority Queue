@@ -1,0 +1,161 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX 100
+
+struct Node {
+    int data;
+    int priority;
+};
+
+struct Node pq[MAX];
+int size = 0;
+
+// Swap
+void swap(struct Node *a, struct Node *b) {
+    struct Node temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+// Insert
+void insert() {
+    int data, priority, i;
+
+    if (size == MAX) {
+        printf("\nPriority Queue Overflow!\n");
+        return;
+    }
+
+    printf("Enter element: ");
+    scanf("%d", &data);
+
+    printf("Enter priority: ");
+    scanf("%d", &priority);
+
+    pq[size].data = data;
+    pq[size].priority = priority;
+
+    i = size;
+    size++;
+
+    // Heapify Up
+    while (i > 0 &&
+           pq[i].priority > pq[(i - 1) / 2].priority) {
+        swap(&pq[i], &pq[(i - 1) / 2]);
+        i = (i - 1) / 2;
+    }
+
+    printf("Element inserted successfully.\n");
+}
+
+// Delete
+void deleteElement() {
+    int i, largest, left, right;
+
+    if (size == 0) {
+        printf("\nPriority Queue Underflow!\n");
+        return;
+    }
+
+    printf("\nDeleted element: %d\n", pq[0].data);
+
+    pq[0] = pq[size - 1];
+    size--;
+
+    // Heapify Down
+    i = 0;
+
+    while (1) {
+        left = 2 * i + 1;
+        right = 2 * i + 2;
+        largest = i;
+
+        if (left < size &&
+            pq[left].priority > pq[largest].priority)
+            largest = left;
+
+        if (right < size &&
+            pq[right].priority > pq[largest].priority)
+            largest = right;
+
+        if (largest == i)
+            break;
+
+        swap(&pq[i], &pq[largest]);
+        i = largest;
+    }
+}
+
+// Peek
+void peek() {
+    if (size == 0) {
+        printf("\nPriority Queue is empty!\n");
+        return;
+    }
+
+    printf("\nHighest Priority Element: %d\n", pq[0].data);
+    printf("Priority: %d\n", pq[0].priority);
+}
+
+// Display
+void display() {
+    int i;
+
+    if (size == 0) {
+        printf("\nPriority Queue is empty!\n");
+        return;
+    }
+
+    printf("\nPriority Queue:\n");
+    printf("Element\tPriority\n");
+
+    for (i = 0; i < size; i++) {
+        printf("%d\t%d\n", pq[i].data, pq[i].priority);
+    }
+}
+
+// Main
+int main() {
+    int choice;
+
+    while (1) {
+        printf("\n========== PRIORITY QUEUE ==========\n");
+        printf("1. Insert\n");
+        printf("2. Delete\n");
+        printf("3. Peek\n");
+        printf("4. Display\n");
+        printf("5. Exit\n");
+        printf("====================================\n");
+
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                insert();
+                break;
+
+            case 2:
+                deleteElement();
+                break;
+
+            case 3:
+                peek();
+                break;
+
+            case 4:
+                display();
+                break;
+
+            case 5:
+                printf("\nProgram terminated.\n");
+                exit(0);
+
+            default:
+                printf("\nInvalid choice!\n");
+        }
+    }
+
+    return 0;
+}
