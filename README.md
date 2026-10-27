@@ -1,5 +1,5 @@
 <!-- ======================= HERO ======================= -->
-
+# DSA IN C <img align="right" src="https://skillicons.dev/icons?i=c&theme=dark" />
 <p align="center">
   <img src="https://user-images.githubusercontent.com/74038190/213910842-5a320d6b-e48f-4d41-a901-0e6a357e8dae.gif"
        width="280"
@@ -103,42 +103,6 @@ navigate, practice, understand, and revise individual concepts.
 - **Editor:** Visual Studio Code
 
 ---
-
-## ▶️ How to Compile and Run
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/DSA-in-C.git
-```
-
-### 2. Navigate to the project
-
-```bash
-cd DSA-in-C
-```
-
-### 3. Compile a C program
-
-```bash
-gcc path/to/file.c -o program
-```
-
-### 4. Execute the program
-
-**Linux / macOS:**
-
-```bash
-./program
-```
-
-**Windows:**
-
-```powershell
-.\program.exe
-```
-
-> Replace `path/to/file.c` with the path to the C source file you want to execute.
 
 ---
 
